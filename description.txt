@@ -1,0 +1,2 @@
+### Recoil - set
+- +event.currentTarget.value는 string을 number로 변환시켜준다.
