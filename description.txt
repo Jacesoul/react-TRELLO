@@ -9,3 +9,4 @@
 - Draggable은 어떤것을 드래그 할수 있는 영역을 의미한다. 
 - Droppable의 children이 함수여야 하는이유는 Droppable안에 component를 넣으면 사용할 수 있는 무언가를 얻는다.
 - dragHandleProps속성은 특정한 곳에서 드래그할수 있게 하는 속성이다.
+- placeholder는 droppable이 끝날때 두는 무언가라서 사이즈가 이상하게 변하지 않는다.
