@@ -25,24 +25,18 @@ const toDos = ["a", "b", "c", "d", "e", "f"];
 
 function App() {
   const [toDos, setToDo] = useRecoilState(toDoState);
-  const onDragEnd = ({ draggableId, destination, source }: DropResult) => {
-    if (!destination) return;
-    /*
-    setToDo((prevToDos) => {
-      const toDosCopy = [...prevToDos];
-      // 1) Delete item on source.index
-      console.log("Delete item on", source.index);
-      console.log(toDosCopy);
-      toDosCopy.splice(source.index, 1);
-      console.log("Delete item");
-      console.log(toDosCopy);
-      // 2) Put back the item on the destination.index
-      console.log("Put back", draggableId, "on ", destination.index);
-      toDosCopy.splice(destination?.index, 0, draggableId);
-      console.log(toDosCopy);
-      return toDosCopy;
-    });
-    */
+  const onDragEnd = (info: DropResult) => {
+    console.log(info);
+    const { destination, draggableId, source } = info;
+    if (destination?.droppableId === source.droppableId) {
+      // same board movement
+      setToDo((allBoards) => {
+        const boardCopy = [...allBoards[source.droppableId]];
+        boardCopy.splice(source.index, 1);
+        boardCopy.splice(destination?.index, 0, draggableId);
+        return { ...allBoards, [source.droppableId]: boardCopy };
+      });
+    }
   };
   return (
     <DragDropContext onDragEnd={onDragEnd}>
