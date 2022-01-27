@@ -12,3 +12,4 @@
 - placeholder는 droppable이 끝날때 두는 무언가라서 사이즈가 이상하게 변하지 않는다.
 - onDragEnd함수는 드래그가 끝났을때 실행되는 함수이다.
 - onDragEnd함수는 어떤 일이 일어났는지에 대한 정보로 많은 argument를 준다.
+- react.js에서 key를 숫자인 index로 주는것에 익숙하지만 beautiful dnd에서는 draggableId는 key와 무조건 같아야한다. 
