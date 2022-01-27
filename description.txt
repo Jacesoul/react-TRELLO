@@ -20,3 +20,10 @@
 - snapshot의 isDraggingOver값은 유저가 board 위로 드래그해서 들어오고 있는지 알려줄수 있는것이다.
 - 또한 draggingFromThisWith를 통해 유저가 해당 board로 부터 드래그를 시작했는지도 알려준다.
 - ref는 쉽게 말해서, react코드를 이용해 HTML 요소를 지정하고 가져올수 있는 방법이다. 다시 말해 자바스크립트로부터 HTML 요소를 가져오고 수정하는 방법이다.
+
+### Code Challenge
+- input창 예쁘게 만들기 
+- refresh할때 모든 toDo state를 local storage에 저장하기 
+- toDo 삭제기능 => 삭제를 위한 버튼도 좋고 다른 보드를 만들어서 드래그해서 삭제하기 기능도 좋다! 
+- board 자체의 순서를 변경하기 
+- 코너에 작은form창을 만들어서 borad를 생성하기 
